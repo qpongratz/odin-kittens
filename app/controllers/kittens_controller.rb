@@ -8,7 +8,7 @@ class KittensController < ApplicationController
   end
 
   def new
-    @kitten = Kitten.new(kitten_params)
+    @kitten = Kitten.new
   end
 
   def create
