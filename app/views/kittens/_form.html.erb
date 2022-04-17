@@ -2,10 +2,10 @@
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.label :age %>
-  <%= f.number_field :age %>
+  <%= f.select :age, 1..20 %>
   <%= f.label :cuteness %>
-  <%= f.number_field :cuteness, in: 1..10 %>
+  <%= f.select :cuteness, 1..10 %>
   <%= f.label :softness %>
-  <%= f.number_field :softness, in: 1..10 %>
+  <%= f.select :softness, 1..10 %>
   <%= f.submit %>
 <% end %>
