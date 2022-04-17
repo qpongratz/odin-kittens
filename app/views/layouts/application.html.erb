@@ -14,6 +14,7 @@
     <% flash.each do |type, message| %>
       <div class="<%= type %>"><%= message %></div>
     <% end %>
+    <%= link_to 'Create a new kitten', new_kitten_path %>
     <%= yield %>
   </body>
 </html>
