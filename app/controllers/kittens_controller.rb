@@ -26,6 +26,7 @@ class KittensController < ApplicationController
   def destroy
     @kitten = Kitten.find(params[:id])
     @kitten.delete
+    redirect_back_or_to root_path
   end
 
   def edit

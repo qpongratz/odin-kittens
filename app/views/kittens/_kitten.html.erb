@@ -1,8 +1,12 @@
 <div class="single-kitten">
-  <h2><%= kitten.name %></h2>
+  <h2><%= link_to kitten.name, kitten %></h2>
   <ul>
     <li>Age: <%= kitten.age %></li>
     <li>Cuteness: <%= kitten.cuteness %>/10</li>
     <li>Softness: <%= kitten.softness %>/10</li>
   </ul>
+  <div class="links">
+    <%= link_to 'Edit Kitten', edit_kitten_path(kitten) %>
+    <%= button_to 'Delete Kitten', kitten, method: :delete, form: { data: { turbo_confirm: 'Are you sure?' } } %>
+  </div>
 </div>
