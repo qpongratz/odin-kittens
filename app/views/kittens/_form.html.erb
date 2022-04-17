@@ -1,3 +1,17 @@
+<div class="errors">
+  <% if kitten.errors.any? %>
+    <%= "#{pluralize(kitten.errors.count, 'error')} prevented this form from being submitted" %>
+    <ul>
+      <li>
+        <% kitten.errors.each do |error| %>
+          <%= error.full_message %>
+        <% end %>
+      </li>
+    </ul>
+    
+  <% end %>
+</div>
+
 <%= form_with model: kitten do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
